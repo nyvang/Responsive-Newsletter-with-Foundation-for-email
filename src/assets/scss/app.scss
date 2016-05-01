@@ -1,0 +1,119 @@
+@import 'settings';
+@import 'foundation';
+
+@mixin align($which) {
+    text-align: $which;
+}
+
+tr, tr th {
+    text-align: center;
+}
+table, tr, td {
+    padding: 0;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.margin-center {
+    margin: 0 auto;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.emphasize {
+    font-style:italic;
+    font-size: 12px;
+    color: $medium-gray;
+}
+
+.center-text {
+    @include align(center);
+    @extend .upper;
+}
+
+.cntr {
+    @include align(center);
+    margin: 0 auto;
+}
+
+.opt-out-text {
+    @include align(center);
+    font-size: 14px;
+}
+
+.on-line {
+    display: inline-block;
+}
+
+.show-in-browser {
+    @include align(center);
+    @extend .cntr;
+    @extend .margin-center;
+    @extend .on-line;
+}
+
+.header {
+    .alternate-bg {
+        margin-bottom: 15px;
+    }
+}
+
+.big-img {
+    width: 100%;
+}
+
+.alternate-bg {
+    background-color: $primary-color;
+    width:100%; 
+    height:$default-bar-height;
+    padding:0;
+    vertical-align: middle;
+    color: $white;
+}
+
+.navbar-link-item {
+    text-transform:uppercase;
+    color: #645a58;
+    font-family: 'Lusitana',serif;
+    font-weight:400;
+    @extend .margin-center;
+}
+.contact-link-item {
+    text-transform:uppercase;
+    color: #ffffff;
+    font-family: 'Lusitana',serif;
+    @extend .margin-center;
+}
+
+.item {
+    @extend .margin-center;
+    .img {
+        width: 100%;
+        max-width:100%; 
+        height:auto; 
+        display:block; 
+        margin:0 auto;
+        box-shadow: $img-box-shadow;
+    }
+
+    .description {
+        margin-top:3px; 
+        margin-bottom:3px;
+        font-family:Arial;
+        font-size:14px;
+        color: $dark-gray !important;
+    }
+}
+
+.img-icon-link{
+    display: inline;
+    color: $white;
+   
+    .img-icon {
+        vertical-align:middle;
+        display: inline;
+        @extend .margin-center;
+    }
+}
